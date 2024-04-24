@@ -1,17 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "api/vercel-ssr/index.js": {
-      "includeFiles": "dist/**"
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
     }
-  },
+  ],
   "routes": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/api/vercel-ssr/index.js"
+      "src": "/(.*)",
+      "dest": "app.js"
     }
   ]
 }
