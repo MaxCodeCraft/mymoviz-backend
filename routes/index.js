@@ -4,7 +4,7 @@ var router = express.Router();
 const options = {
   method: "GET",
   headers: {
-    accept: "application/json",
+    Accept: "application/json",
     Authorization: `Bearer ${process.env.AUTHENTIFICATION_KEY}`,
   },
 };
